@@ -1,0 +1,24 @@
+Outline:
+
+initial page:
+	1. link to sign in and sign up page
+
+sign in page:
+	1. enter User Name and passaword {enter email or username}
+	2. valdations: .com/ @ / etc..
+	3. Linked to the main page/ link to register.
+
+Register page:
+	1. enter user name, password, email address
+	2. Link to sigh in page (confirm information)
+
+Main page:
+	Moderators:
+		1. A moderator can view stories as well as submit them.
+		2. Moderators must approve a story before it's front-page visible
+		3. Users must be able to submit stories for review.
+		4. There will be a button for appove or reject
+			a. aprove will change the database collomun apporve to true or false.
+	1. News stories are listed in chronological order
+	2. Every news story has: title, story, date, submitted_by, approved_by
+	3. Link to RSS feed
