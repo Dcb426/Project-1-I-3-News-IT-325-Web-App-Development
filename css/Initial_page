@@ -1,0 +1,67 @@
+header 
+{
+	width: 40%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 100px;
+	float: center;
+	text-align: center;
+	border: 5px solid white;
+}
+#header_Title
+{
+	font-size: 2.7em;
+	font-family:Times New Roman;
+	text-align: center;
+	color: white;
+}
+#sub_Title1
+{
+	font-size: 1.5em;
+	font-family:Times New Roman;
+	text-align: center;
+	color: white;
+	font-style: italic;
+}
+body
+{
+	background-color: #002966;
+}
+#loginBox
+{
+	height: 150px;
+	width: 40%;
+	margin-top: 10px;
+	margin-bottom: auto;
+    margin-right: auto;
+    margin-left: auto;
+	float: center;
+	text-align: center;
+	background-color: gray;
+	border: 5px solid white;
+}
+#SignIn
+{
+	font-size: 25px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 9%;
+	padding: 10px 15px;
+}
+#SignUp
+{
+	display: inline;
+	font-size: 25px;
+	margin-left: 20%;
+	margin-right: auto;
+	margin-top: 9%;
+	padding: 10px 15px;
+	-webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+#SignUp:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+#SignIn:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
