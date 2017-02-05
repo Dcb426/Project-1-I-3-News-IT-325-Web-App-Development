@@ -1,5 +1,17 @@
-<!DOCTYPE HTML>
+<!doctype html>
+
 <html lang="en">
+
+<?php
+
+$user = 'root';
+$pass = '';
+$db = 'web_dev_pro1';
+$db = new mysqli('localhost', $user, $pass, $db) or die("Unbale to connect");
+echo "Great work!!!"
+
+?>
+
 <head>
   <meta charset="utf-8">
 
@@ -11,8 +23,7 @@
 
 </head>
 
-<body>
-	
+<body>	
   <script src="js/scripts.js"></script>
 </body>
 </html>
