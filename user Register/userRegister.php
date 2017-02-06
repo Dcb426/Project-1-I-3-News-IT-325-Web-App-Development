@@ -1,33 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-label{display:inline-block;width:150px;margin-bottom:20px;}
-</style>
+  <meta charset="UTF-8">
 
+  <title>Create_New_User</title>
 
-<title>Welcome New User</title>
+  <link rel="stylesheet" href="CNU.css">
 </head>
+
 <body>
+	<header>
+    	<h1 id="CNU_header_Title">Registration Information</h1>
+  	</header>
+  	<div id="loginBox">
+	<form action="userProcess.php" method="post" id="myForm">
 
-<form action="userProcess.php" method="post" >
+		<p id="userName">Username: <input title="Username must not be blank and contain only letters, numbers and underscores." type="text" required pattern="\w+" name="userName"></p>
 
-<label>Userame</label>
-<input type="text" name="userName" />
-<br />
+		<p id="email">Email: <input type="text" name='emailAddress'/></p>
 
-<label>Password</label>
-<input type="password" name="userPassword" />
-<br />
+		<p id="passwd">Password: <input title="Password must contain at least 6 characters, including UPPER/lowercase and numbers." type="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" name="userPassword"></p>
 
-<label>Email</label>
-<input type="text" name="emailAddress" />
-<br />
-
-<input type="submit" value="Register">
-</form>
-
-
-
+		<p id="cpwrd">Confirm Password: <input id="field_pwd2" title="Please enter the same Password as above." type="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" name="pwd2"></p>
+		<p><input type="submit" id="submit" value="Register"></p>
+	</form>
+	</div>
+    <script src="js/jquery-3.1.1.js"></script>
 </body>
 </html>
