@@ -17,6 +17,7 @@ $result = mysqli_query($connect,"INSERT INTO user_data (emailAddress,moderator,u
 				
 	if(mysqli_affected_rows($connect) > 0){
 	echo "<p>User Added</p>";
+	header("Location:loginRegister.php"); 
 	
 	//echo "<a href="index.html"> Go Back </a>";
 	} else {

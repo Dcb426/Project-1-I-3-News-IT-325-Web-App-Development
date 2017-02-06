@@ -5,7 +5,8 @@
 
   <title>Create_New_User</title>
 
-  <link rel="stylesheet" href="CNU.css">
+  <link rel="stylesheet" href="css/CNU.css">
+ <script src="js/jquery-3.1.1.js"></script>
 </head>
 
 <body>
@@ -22,9 +23,24 @@
 		<p id="passwd">Password: <input title="Password must contain at least 6 characters, including UPPER/lowercase and numbers." type="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" name="userPassword"></p>
 
 		<p id="cpwrd">Confirm Password: <input id="field_pwd2" title="Please enter the same Password as above." type="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" name="pwd2"></p>
+		<p id="mod"> Moderator? <p>
+		<input type="button" id="la1"  name="btn" value="YES" onClick="myFunc()" style='margin-right: 20px;'/>
+		<input type="reset" id="la2"  name="btn" value="NO" onClick="noFunc()" style='margin-left: 10px;'/>
+		<div id="mykey">
+			<p style="font-size: 25px";>Moderator Key: <input title="Key must contain at least 6 characters, including UPPER/lowercase and numbers." type="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" name="MKey"></p>
+	</div>
 		<p><input type="submit" id="submit" value="Register"></p>
 	</form>
 	</div>
-    <script src="js/jquery-3.1.1.js"></script>
+		<script>
+	function myFunc() {
+    	var x = document.getElementById('mykey');
+        	x.style.display = 'block';
+	}
+	function noFunc() {
+    	var x = document.getElementById('mykey');
+        	x.style.display = 'none';
+	}
+	</script>
 </body>
 </html>

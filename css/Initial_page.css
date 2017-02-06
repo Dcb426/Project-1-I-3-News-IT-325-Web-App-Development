@@ -1,12 +1,24 @@
 header 
 {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	float: center;
+	text-align: center;
+	border: 8px solid white;
+	background-color: #002966;
+}
+#try
+{
 	width: 40%;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 100px;
 	float: center;
 	text-align: center;
-	border: 5px solid white;
+	border: 8px solid white;
+	background-color: #002966;
 }
 #header_Title
 {

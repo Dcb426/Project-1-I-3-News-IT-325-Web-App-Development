@@ -14,14 +14,18 @@
         	if (mysqli_num_rows($result2) > 0 )
         	{
         		echo "Welcome back $myUsername, the moderator." ;
-        	}
+                //echo '<script type="text/javascript"> window.open("home.php","_self");</script>';
+        	   header("Location:Moderator.php"); 
+            }
         	else
         	{
         		echo "Welcome back $myUsername";
+                header("normalUser.php");
         	}
             
         }
         else
         {
-            echo 'The username or password are incorrect!';
+            echo "<h2>The username or password are incorrect!</h2>";
         }
+?>
