@@ -1,3 +1,13 @@
+<?php
+// session starts with the help of this function 
+session_start();
+
+if(isset($_SESSION['use']))   // Checking whether the session is already there or not if 
+                              // true then header redirect it to the home page directly 
+ {
+    header("Location:MainPage.php"); 
+ }
+ ?>
 <!DOCTYPE HTML>
 <html lang="en">
 <head>

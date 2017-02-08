@@ -35,6 +35,19 @@ body
 	background-color: #c0b481;
 	border: 5px solid white;
 }
+#dcb
+{
+	height: 450px;
+	width: 40%;
+	margin-top: 10px;
+	margin-bottom: auto;
+    margin-right: auto;
+    margin-left: auto;
+	float: center;
+	text-align: center;
+	background-color: #c0b481;
+	border: 5px solid white;
+}
 #myForm
 {
 	float: center;

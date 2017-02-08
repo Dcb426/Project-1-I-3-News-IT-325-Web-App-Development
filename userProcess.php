@@ -4,7 +4,7 @@
 
 // create a variable
 $emailAddress=$_POST['emailAddress'];
-$moderator = "False";
+$moderator = $_POST['MKey'];
 $userName=$_POST['userName'];
 $userPassword=$_POST['userPassword'];
 

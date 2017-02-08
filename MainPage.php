@@ -20,6 +20,7 @@
 
 		    /* Full height */
 		    height: 100%;
+		    width: fill;
 
 		    /* Create the parallax scrolling effect */
 			background-attachment: fixed;
@@ -38,7 +39,7 @@
 
 		<input type="submit" value="Logout">
 		</form>
-		<form method="GET" action="submit Article/articleRegister.php">
+		<form method="GET" action="articleRegister.php">
 
 		<input type="submit" value="Submit Article">
 		</form>
@@ -47,28 +48,23 @@
 		<h1 id="top_box_heading">Current Stories:</h1>
 		<?php
 
-       $result1 = mysqli_query($connect,"SELECT * FROM article WHERE approved_By = ''");
+       $result1 = mysqli_query($connect,"SELECT * FROM article WHERE approved_By = 'yes'");
 
        if (mysqli_num_rows($result1) > 0 ) 
        {
 		    // output data of each row
 		    while($row = $result1->fetch_assoc()) {
-		        echo "<div id= "">"
-		        echo "Title: " . $row["myTitle"]. " - Uploaded Date: " . $row["myDate"]. " - Author " . $row["submitted_By"]. "<br>";
-		        echo "Story: " . $row["myStory"]. "<br>";
+		      
+		        echo "<div id='trial'>";
+		        echo "<p id='head'> Author " . $row["submitted_By"]. " - Upload Date: " . $row["myDate"]. " - Title: " . $row["myTitle"]. "</p>";
+		        echo "<p id='bod'> Story: " . $row["myStory"]. "</p>";
+		        echo "</div>";
 		    }
 		} else {
 		    echo "No new article needs approval";
 		}
 		?>
 	</div>
-
-<?php
-if(!isset($_SESSION['use'])) // If session is not set then redirect to Login Page
-  {
-    header("Location:loginRegister.php");  
-  }
-?>
   <script src="js/jquery-3.1.1.js"></script>
 </body>
 </div>

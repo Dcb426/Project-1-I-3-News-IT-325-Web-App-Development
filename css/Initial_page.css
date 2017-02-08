@@ -22,7 +22,7 @@ header
 }
 #header_Title
 {
-	font-size: 2.7em;
+	font-size: 2.6em;
 	font-family:Times New Roman;
 	text-align: center;
 	color: white;
@@ -34,6 +34,27 @@ header
 	text-align: center;
 	color: white;
 	font-style: italic;
+}
+#Current_Stories
+{
+	height: 50%;
+	width: 80%;
+	margin-top: auto;
+	margin-bottom: auto;
+    margin-right: auto;
+    margin-left: auto;
+	float: center;
+	background-color: tan;
+	border: 5px solid white;
+}
+#trial
+{
+	height: auto;
+	width: fill;
+	margin-left: 1px;
+	float: center;
+	background-color: white;
+	border: 5px solid #002966;
 }
 body
 {

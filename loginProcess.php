@@ -1,10 +1,10 @@
 <?php include 'database.php'; ?>
  
 <?php
-
+        session_start();  
         $myUsername = $_POST["myUsername"]; 
         $myPassword = $_POST["myPassword"]; 
-        $myModerator = "True"; 
+        $myModerator = "Xj9-123"; 
 
         $result1 = mysqli_query($connect,"SELECT userName, userPassword, moderator FROM user_data WHERE userName = '".$myUsername."' AND  userPassword = '".$myPassword."'");
 
@@ -20,7 +20,7 @@
         	else
         	{
         		echo "Welcome back $myUsername";
-                header("normalUser.php");
+                header("Location:MainPage.php");
         	}
             
         }

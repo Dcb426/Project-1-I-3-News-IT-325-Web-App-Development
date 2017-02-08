@@ -17,9 +17,11 @@ $result = mysqli_query($connect,"INSERT INTO article (myTitle,myStory,myDate,sub
 				
 	if(mysqli_affected_rows($connect) > 0){
 	echo "<p>Atricle submitted</p>";
+	header("Location:MainPage.php");
 	
 	//echo "<a href="index.html"> Go Back </a>";
 	} else {
 		echo "Article failed to submit<br />";
 		echo mysqli_error ($connect);
+		header("Location:articleRegister.php");
 	}
