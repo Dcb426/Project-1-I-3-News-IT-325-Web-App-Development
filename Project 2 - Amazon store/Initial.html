@@ -1,0 +1,33 @@
+<?php
+// session starts with the help of this function 
+session_start();
+
+if(isset($_SESSION['use']))   // Checking whether the session is already there or not if 
+                              // true then header redirect it to the home page directly 
+ {
+    header("Location:MainPage.php"); 
+ }
+ ?>
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <title>London Incorporated - Darius Bell : Steven Qin</title>
+  <link rel="stylesheet" href="css/initial_page.css">
+
+</head>
+
+<body>
+	<header id="try">
+		<h1 id="header_Title">LONDON INCORPORATED</h1>
+		<h3 id="sub_Title1">"For The People, By The People"</h3>
+	</header>
+	<div id="loginBox">
+		<input type="button" id="SignIn" name="eventButton" value="Sign In" onClick="location.href='loginRegister.php';"/>
+		<input type="button" id="SignUp" name="eventButton" value="Register" onclick="location.href='userRegister.php';"/>
+	</div>
+	<script src="js/jquery-3.1.1.js"></script>
+  <script src="js/scripts.js"></script>
+</body>
+</html>
