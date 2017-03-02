@@ -7,10 +7,10 @@ $dbName = 'webdev_project2';
 
 
 //Create connection and select DB
-$db = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
+$connect = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
 
-if ($db->connect_error) {
-    die("Unable to connect database: " . $db->connect_error);
+if ($connect->connect_error) {
+    die("Unable to connect database: " . $connect->connect_error);
 }
 
 else {
@@ -29,10 +29,10 @@ else {
 			 `status` enum('1','0') COLLATE utf8_unicode_ci NOT NULL DEFAULT '1',
 			 PRIMARY KEY (`id`)
 			) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci";
-			 if ($db->query($cache) === TRUE) {
+			 if ($connect->query($cache) === TRUE) {
 			    echo "Table MyGuests created successfully";
 			} else {
-			    echo "Error creating table: " . $db->error;
+			    echo "Error creating table: " . $connect->error;
 			}
 	  }
 	  else {

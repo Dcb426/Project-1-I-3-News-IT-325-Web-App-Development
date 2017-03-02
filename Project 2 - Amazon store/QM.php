@@ -61,7 +61,7 @@
         <ul id="products">
               <?php
 
-                 $result1 = mysqli_query($db,"SELECT * FROM Products");
+                 $result1 = mysqli_query($connect,"SELECT * FROM Products");
 
                  if (mysqli_num_rows($result1) > 0 ) 
                  {
