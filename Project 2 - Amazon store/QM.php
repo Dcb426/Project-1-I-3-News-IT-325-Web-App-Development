@@ -1,3 +1,10 @@
+
+<?php   
+  include 'database.php';
+  session_start();  
+  echo 'Welsome back. ', $_SESSION["pass_userName"];
+
+?>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -12,7 +19,7 @@
         /* The image used */
         background-image: url('img/bground.jpg');
 
-        /* Full height */
+        /* Full height */     
         height: 100%;
 
         /* Create the parallax scrolling effect */
@@ -54,13 +61,7 @@
         <ul id="products">
               <?php
 
-                 $connect=mysqli_connect('localhost','root','','webdev_project2');//('localhost', 'root', '','db name')
-
-                if(mysqli_connect_errno($connect))
-                {
-                    echo 'Failed to connect';
-                }
-                 $result1 = mysqli_query($connect,"SELECT * FROM Products");
+                 $result1 = mysqli_query($db,"SELECT * FROM Products");
 
                  if (mysqli_num_rows($result1) > 0 ) 
                  {
