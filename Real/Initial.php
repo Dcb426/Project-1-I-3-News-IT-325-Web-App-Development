@@ -1,6 +1,7 @@
 
 <?php   
   include 'database.php';
+  echo 'Welsome back. ', $_SESSION["pass_userName"];
 ?>
 <html lang="en">
 <head>

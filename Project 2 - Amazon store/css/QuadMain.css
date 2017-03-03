@@ -83,9 +83,9 @@ div.scrollmenu a:hover {
     position: absolute;
     background-color: black;
     min-width: 160px;
-    overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 999;
+    overflow: auto;
 }
 
 .dropdown-content a {
@@ -264,3 +264,40 @@ section ul.products li {
 #main {
     padding:20px 0;
 }
+ #backgroundaudio {
+  display: block;
+  position: fixed;
+  bottom: -43px;
+  left: 5px;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+ }
+ #backgroundaudio:hover {
+  bottom: 0;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+ }
+ #backgroundaudio audio {
+  background: #ffffff;
+  padding: 5px;
+  display: table-cell;
+  vertical-align: middle;
+  height: 43px;
+  z-index: 9998;
+ }
+ #backgroundaudio i {
+  font-size: 40px;
+  display: block;
+  background: #ffffff;
+  padding: 5px;
+  width: 50px;
+  float: none;
+  margin-bottom: -1px;
+  z-index: 9999;
+ }

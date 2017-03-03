@@ -1,9 +1,15 @@
 
 <?php   
   include 'database.php';
-  session_start();  
-  echo 'Welsome back. ', $_SESSION["pass_userName"];
-  $myUserName = $_SESSION["pass_userName"];
+  session_start();
+  if(isset($_SESSION['use']))   // Checking whether the session is already there or not if                            // true then header redirect it to the home page directly 
+ {
+    header("Location:Initial.html"); 
+ }
+ else
+  echo "<script>alert('Welcome Back,".$_SESSION["pass_userName"]."');</script>";
+ echo $_SESSION["pass_userName"];
+
 ?>
 <html lang="en">
 <head>
@@ -45,6 +51,7 @@
            <div class="dropdown">
               <button onclick="myFunction()" class="dropbtn">Products</button>
                 <div id="myDropdown" class="dropdown-content">
+                  <a href="#home"></a>
                 </div>
             </div>
            <a href="#contact">Cart</a>
@@ -58,21 +65,23 @@
         <ul id="products">
               <?php
 
-                 $result1 = mysqli_query($db,"SELECT * FROM Products");
+                 $result1 = mysqli_query($connect,"SELECT * FROM Products");
 
                  if (mysqli_num_rows($result1) > 0 ) 
                  {
                   // output data of each row
                   while($row = $result1->fetch_assoc()) {
                   
-                      echo "<li><a class='item' href='#' id='".$row["sku"]."' draggable='true'>";
+                      echo "<li><form action='QMP.php' method='post'>";
+                      echo "<input type='hidden' name='param1' value='".$row["sku"]."'/>";
+                      echo "<a href='#' onclick='this.parentNode.submit()'class='item' id='".$row["sku"]."' draggable='true'>";
                       echo "<img src='img/".$row["image"]."' />";
                       echo "<div>";
-                      echo "<p><strong>" . $row["sku"]. "</strong></p>";
+                      echo "<p><strong>" . $row["sku"]. ": ".$row["model"]."</strong></p>";
                       echo "<p><strong>Price</strong>: <span>$" . $row["msrp"]. "</span></p>";
                       echo "<p><strong>Quantity</strong>: <span>" . $row["Quanity"]. "</span></p>";
                       echo "</div>";
-                      echo "</a></li>";
+                      echo "</a></form></li>";
                   }
               } else {
                   echo "No data";

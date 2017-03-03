@@ -8,6 +8,7 @@
  }
  else
   echo "<script>alert('Welcome Back,".$_SESSION["pass_userName"]."');</script>";
+ echo $_SESSION["pass_userName"];
 
 ?>
 <html lang="en">
@@ -64,7 +65,7 @@
         <ul id="products">
               <?php
 
-                 $result1 = mysqli_query($db,"SELECT * FROM Products");
+                 $result1 = mysqli_query($connect,"SELECT * FROM Products");
 
                  if (mysqli_num_rows($result1) > 0 ) 
                  {

@@ -1,7 +1,9 @@
 <?php   
   include 'database.php';
   session_start();
+   echo $_SESSION["pass_userName"];
   if(isset($_SESSION['use']))   // Checking whether the session is already there or not if                            // true then header redirect it to the home page directly 
+
  {
     header("Location:Initial.html"); 
  }
@@ -58,7 +60,7 @@
   </header>
               <?php
                 $myTitle=$_POST['param1'];
-                 $result1 = mysqli_query($db,"SELECT * FROM Products where sku = '$myTitle'");
+                 $result1 = mysqli_query($connect,"SELECT * FROM Products where sku = '$myTitle'");
 
                  if (mysqli_num_rows($result1) > 0 ) 
                  {

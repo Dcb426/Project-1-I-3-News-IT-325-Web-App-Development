@@ -84,9 +84,9 @@ div.scrollmenu a:hover {
     position: absolute;
     background-color: black;
     min-width: 160px;
-    overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 999;
+        overflow: scroll;
 }
 
 .dropdown-content a {
@@ -147,22 +147,22 @@ p { margin:0;
 #products li {
   display:inline-block;
     position:relative;
-    background-color: white;
 }
 .item {
   display: block;
   width:200px;
-  height:250px;
+  height:280px;
   margin:30px;
   border:3px solid #494949;
   text-decoration:none;
   color: #000;
   text-align:center;
   overflow: hidden;
+  background-color: white;
 
 }
 .item img {
-  border:0;
+  border: 1px solid;
   margin-left:10px auto;
   margin-right:10px auto;;
   margin-top:10px auto;
@@ -171,7 +171,7 @@ p { margin:0;
 }
 .item div {
   background:rgb(0, 0, 0);
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 1, 0.5);
   color:White;
   display:none;
   text-align:center;
@@ -208,4 +208,48 @@ p { margin:0;
 }
 #total {
   float:right;
+}
+.productclear
+{
+  border: 10px solid black;
+  width: 50%;
+  margin-top: 5%;
+  position:center;
+}
+.productclear h4
+{
+   text-align: center;
+}
+.opBox
+{
+  width:250px;
+  height:300px;
+  margin-left: auto;
+  margin-right: 2%;
+  margin-top: auto;
+  float: left;
+}
+.TopBox
+{
+  d
+  width: 40%;
+  text-align: center;
+  border: 8px solid black;
+  background-color: white;
+}
+summary {
+  cursor: pointer;
+  font-size: 12pt;
+  outline: 0;
+  text-align: center; }
+
+#dk
+{
+  border: 1px solid;
+  width:180px;
+  height:180px;
+}
+#goo
+{
+  text-align: left;
 }
