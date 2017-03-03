@@ -20,11 +20,7 @@
 
                   }
               } else {
-                  echo "<script>alert('You have not selected any items: Press Ok to be redirected');</script>";
-                  
-
-                  echo"<meta http-equiv='refresh' content='3;loginRegister.php'/>";
-
+                  echo "No data";
               }
 ?>
 
