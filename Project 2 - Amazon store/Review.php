@@ -5,6 +5,7 @@
   		<?php 
 	  		session_start(); 
 	  		echo "Welcome back ".$_SESSION["pass_userName"]." "; 
+	  		
 	  		$productId=$_POST['productID'];
 	  		$userName = $_SESSION["pass_userName"]
   		?>
@@ -26,12 +27,12 @@ label{display:inline-block;width:150px;margin-bottom:20px;}
 		<br />
 
 		<br />
-		<label>mydate:</label>
-		<input type="text" name="myDate" />
-		 - yyyy-mm-dd
+		<label>Rate from 1 - 5:</label>
+		<input type ="text"  name="myRate" />
+		 1.0 - 5.0
 		<br />
 
-		<label>submitted_by: <?php echo ".$_SESSION["pass_userName"]." ?></label>
+		<label>submitted_by: <?php echo $_SESSION["pass_userName"] ?></label>
 		<br />
 
 		<input type="submit" value="SUBMIT">
