@@ -1,7 +1,7 @@
 <?php   
   include 'database.php';
   session_start();
-   echo $_SESSION["pass_userName"];
+  echo "Welcome back ".$_SESSION["pass_userName"]." ";
   if(isset($_SESSION['use']))   // Checking whether the session is already there or not if                            // true then header redirect it to the home page directly 
 
  {

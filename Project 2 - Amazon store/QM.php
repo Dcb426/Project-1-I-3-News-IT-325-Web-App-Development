@@ -6,9 +6,13 @@
  {
     header("Location:Initial.html"); 
  }
- else
-  echo "<script>alert('Welcome Back,".$_SESSION["pass_userName"]."');</script>";
- echo $_SESSION["pass_userName"];
+ else 
+  if ($_SESSION["pass_userName"] != null)
+  {
+     echo "<script>alert('Welcome Back,".$_SESSION["pass_userName"]."');</script>";
+     echo $_SESSION["pass_userName"];
+  }
+ 
 
 ?>
 <html lang="en">
@@ -47,13 +51,11 @@
       <div class="RightTopBox">
         <h1>Menu<h1>
          <div class="scrollmenu">
-           <a href="#home">Home</a>
+           <a href="purchase_history.php">My Orders</a>
            <div class="dropdown">
               <button onclick="myFunction()" class="dropbtn">Products</button>
-                <div id="myDropdown" class="dropdown-content">
-                  <a href="#home"></a>
-                </div>
-            </div>
+                <div id="myDropdown" class="dropdown-content"></div>
+          </div>
            <a href="#contact">Cart</a>
            <a href="loginRegister.php">Login</a>
         </div>
@@ -71,7 +73,6 @@
                  {
                   // output data of each row
                   while($row = $result1->fetch_assoc()) {
-                  
                       echo "<li><form action='QMP.php' method='post'>";
                       echo "<input type='hidden' name='param1' value='".$row["sku"]."'/>";
                       echo "<a href='#' onclick='this.parentNode.submit()'class='item' id='".$row["sku"]."' draggable='true'>";
@@ -93,11 +94,12 @@
     <div id="right">
       <div id="cart">
         <form method='post' action='QMProcess.php'>
-        <h1>Shopping Cart</h1>
-        <ul></ul>
-        <p id="total"><strong>Total:</strong> $<span>0.00</span></p>
-        <h2>Drop here to add to cart</h2>
-        <input type="submit" value="Checkout">
+          <h1>Shopping Cart</h1>
+          <ul></ul>
+          <p id="total"><strong>Total:</strong> $<span>0.00</span></p>
+          <h2>Drop here to add to cart</h2>
+          <input type="submit" value="Checkout">
+        
         </form>
       </div>
     </div>
