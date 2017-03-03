@@ -3,7 +3,7 @@
   include 'database.php';
   session_start();  
   echo 'Welsome back. ', $_SESSION["pass_userName"];
-
+  $myUserName = $_SESSION["pass_userName"];
 ?>
 <html lang="en">
 <head>
@@ -88,6 +88,10 @@
       <div id="cart">
         <h1>Shopping Cart</h1>
         <ul></ul>
+
+        <?php
+        $result = mysqli_query($connect,"INSERT INTO user_cart (User_Name,User_ShoppingCart) VALUES ('$myUserName','$my_id')");
+        ?>              
         <p id="total"><strong>Total:</strong> $<span>0.00</span></p>
         <h2>Drop here to add to cart</h2>
       </div>

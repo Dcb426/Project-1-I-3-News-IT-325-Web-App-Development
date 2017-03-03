@@ -1,4 +1,6 @@
+
 $('.item')
+
 	.bind('dragstart', function (evt) {
 		evt.dataTransfer.setData('text', this.id);
 		$('h2').fadeIn('fast');
@@ -36,6 +38,8 @@ $('#cart')
 				}
 				return true;
 			} ()),
+
+			
 			quantLeftEl, quantBoughtEl, quantLeft;
 
 		$("h2").fadeOut('fast');
