@@ -1,0 +1,109 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>QuadCopter MainPage</title>
+  <link rel="stylesheet" href="css/QuadMain.css">
+  <style>
+    footer, body, html {
+        height:200%;
+    }
+
+    .parallax {
+        /* The image used */
+        background-image: url('img/bground.jpg');
+
+        /* Full height */
+        height: 100%;
+
+        /* Create the parallax scrolling effect */
+      background-attachment: fixed;
+        background-position: center;
+        background-repeat: repeat;
+        background-size: contain;
+    }
+</style>
+</head>
+<div class="parallax">
+<body>
+  <header>
+    <nav>
+      <div class="LeftTopBox">
+        <h1 id="header_Title">QUADCOPTER EXPRESS</h1>
+        <h3 id="sub_Title1">"For The People, By The People"</h3>
+      </div>
+      <div class="RightTopBox">
+        <h1>Menu<h1>
+         <div class="scrollmenu">
+           <a href="#home">Home</a>
+           <div class="dropdown">
+              <button onclick="myFunction()" class="dropbtn">Products</button>
+                <div id="myDropdown" class="dropdown-content">
+                  <a href="#home">Home</a>
+                  <a href="#about">About</a>
+                  <a href="#contact">Contact</a>
+                </div>
+            </div>
+           <a href="#contact">Cart</a>
+           <a href="loginRegister.php">Login</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div id="backgroundaudio">
+ <i class="icon-volume-up"></i>
+ <audio autoplay="" controls="" loop="" preload="">
+  <source src="lol.mp3" type="audio/mp3"></source>
+  Your browser does not support the audio element.
+ </audio>
+</div>
+  <div id="main"><!-- Defining submain content section -->
+    <!-- template to be used when have php-->
+  <section id="content"><!-- Defining the content section #2 -->
+                <div id="left">
+                    <h3>Last products</h3>
+                    <ul>
+                        <li>
+                            <div class="img"><a href="#"><img alt="" src="img/Quad1.jpg"></a></div>
+                            <div class="info">
+                                <a class="title" href="#">Hubsan X4 H107C HD 2MP Camera 2.4G 4CH 6 Axis Gyro RC Quadcopter</a>
+                                <p>Model: Hubsan X4 H107C</p>
+                                <p>Description: Latest 6-axis flight control system with adjustable gyro sensitivity</p>
+                                <div class="price">
+                                    <span class="st">Our price:</span><strong>$35.65</strong>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+             </div>
+             <div id="right">
+                    <h1>Shopping Cart</h1>
+                    <ul>
+                    </ul>
+                    <span class="total">0.00</span>
+              </div>
+  </section>
+</div>
+  <!--<section class="production">
+        <ul class="products">
+        <li>
+            <a href="#">
+                <img src="img/Quad1.jpg">
+                <h4>Hubsan X4 H107C HD 2MP Camera 2.4G 4CH 6 Axis Gyro RC Quadcopter</h4>
+                <h5>Model: Hubsan X4 H107C</h5>
+                <p>$35.65</p>
+            </a>
+        </li><li>
+            <a href="#">
+                <img src="img/Quad3.jpg">
+                <h4>Mike the Frog Shirt (Orange)</h4>
+                <p>$25.00</p>
+            </a>
+        </li> more list item
+        </ul>
+  </section>
+  -->
+  <script src="js/jquery-3.1.1.js"></script>
+  <script src="js/QuadMain.js"></script>
+</body>
+</div>
+</html>

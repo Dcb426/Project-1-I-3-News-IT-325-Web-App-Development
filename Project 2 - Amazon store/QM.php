@@ -45,9 +45,6 @@
            <div class="dropdown">
               <button onclick="myFunction()" class="dropbtn">Products</button>
                 <div id="myDropdown" class="dropdown-content">
-                  <a href="#home">Home</a>
-                  <a href="#about">About</a>
-                  <a href="#contact">Contact</a>
                 </div>
             </div>
            <a href="#contact">Cart</a>
@@ -61,7 +58,7 @@
         <ul id="products">
               <?php
 
-                 $result1 = mysqli_query($connect,"SELECT * FROM Products");
+                 $result1 = mysqli_query($db,"SELECT * FROM Products");
 
                  if (mysqli_num_rows($result1) > 0 ) 
                  {
@@ -86,14 +83,13 @@
     </div>
     <div id="right">
       <div id="cart">
+        <form method='post' action='QMProcess.php'>
         <h1>Shopping Cart</h1>
         <ul></ul>
-
-        <?php
-        $result = mysqli_query($connect,"INSERT INTO user_cart (User_Name,User_ShoppingCart) VALUES ('$myUserName','$my_id')");
-        ?>              
         <p id="total"><strong>Total:</strong> $<span>0.00</span></p>
         <h2>Drop here to add to cart</h2>
+        <input type="submit" value="Checkout">
+        </form>
       </div>
     </div>
   <script src="js/jquery-3.1.1.js"></script>
