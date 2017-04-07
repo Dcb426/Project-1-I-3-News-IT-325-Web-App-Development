@@ -1,0 +1,47 @@
+#players {
+    overflow: hidden;
+  
+}
+#players #player1, #players #player2{
+    
+  float: left;
+    width: 450px; 
+    height: 700px; 
+    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    padding: 0 2%;
+  border: 2px solid black;
+  
+}
+#players #player2 {  
+  float: right;
+    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    width: 450px;
+    height: 700px; 
+    border: 2px solid black;
+} 
+  
+#hangmancanvas{ 
+  margin-top: 10px;
+  border: 1px solid black;
+}
+#hangmancanvas2{ 
+  margin-top: 10px;
+  float: right;
+  border: 1px solid black;
+}
+#time {
+    text-align: center;
+    text-transform: uppercase;
+    color: red;
+}
+#buttondiv2
+{
+  margin-left: 10px;
+  float: right;
+}

@@ -1,7 +1,11 @@
 
-<?php   
+<?php 
+//Web Dev Team Darius & Steven  
+  
+
   include 'database.php';
-  echo 'Welsome back. ', $_SESSION["pass_userName"];
+  echo "<script>alert('User Needs to Login: Click Login');</script>";
+                  
 ?>
 <html lang="en">
 <head>
